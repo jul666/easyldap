@@ -5,5 +5,5 @@ dn: olcDatabase={1}mdb,cn=config
 changetype: modify
 # allow Clients access to userPassword for POSIX authentication
 add: olcAccess
-olcAccess: {3}to dn.children="ou=People,dc=example,dc=com" attrs=userPassword
-  by dn.exact="ou=Clients,dc=example,dc=com" read
+olcAccess: {3}to dn.children="ou=People,dc=10ave,dc=xyz" attrs=userPassword
+  by dn.exact="ou=Clients,dc=10ave,dc=xyz" read
