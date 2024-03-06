@@ -12,13 +12,13 @@ dn: cn=config
 #              Multiple certificates are simply appended to the file; the order
 #              is not significant.
 add: olcTLSCACertificateFile
-olcTLSCACertificateFile: /etc/letsencrypt/live/ldap.example.com/fullchain.pem
+olcTLSCACertificateFile: /etc/letsencrypt/live/10ave.xyz/fullchain.pem
 -
 # TLSCertificateFile <filename>
 #              Specifies the file that contains the slapd server certificate.
 #
 add: olcTLSCertificateFile
-olcTLSCertificateFile: /etc/letsencrypt/live/ldap.example.com/cert.pem
+olcTLSCertificateFile: /etc/letsencrypt/live/10ave.xyz/cert.pem
 -
 # TLSCertificateKeyFile <filename>
 #              Specifies  the  file  that contains the slapd server private key
@@ -28,7 +28,7 @@ olcTLSCertificateFile: /etc/letsencrypt/live/ldap.example.com/cert.pem
 #              carefully.
 #
 add: olcTLSCertificateKeyFile
-olcTLSCertificateKeyFile: /etc/letsencrypt/live/ldap.example.com/privkey.pem
+olcTLSCertificateKeyFile: /etc/letsencrypt/live/10ave.xyz/privkey.pem
 -
 # TLSCACertificatePath <path>
 #              Specifies the path of  a  directory  that  contains  Certificate
