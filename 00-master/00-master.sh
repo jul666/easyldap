@@ -15,9 +15,9 @@ sudo ldapadd -Q -Y EXTERNAL -H ldapi:/// -f ldif/09-ppolicy.ldif
 sudo ldapadd -Q -Y EXTERNAL -H ldapi:/// -f ldif/10-openssh-lpk.ldif
 sudo ldapadd -Q -Y EXTERNAL -H ldapi:/// -f ldif/11-sudo.ldif
 sudo ldapadd -Q -Y EXTERNAL -H ldapi:/// -f ldif/12-postfix.ldif
-sudo ldapadd -x -D cn=admin,dc=example,dc=com -H ldaps://localhost:636 -W -f ldif/20-users_and_groups.ldif
-sudo ldapmodify -x -D cn=admin,dc=example,dc=com -H ldaps://localhost:636 -W -f ldif/21-import_ssh_pubkey.ldif
+sudo ldapadd -x -D cn=admin,dc=10ave,dc=xyz -H ldaps://localhost:636 -W -f ldif/20-users_and_groups.ldif
+sudo ldapmodify -x -D cn=admin,dc=10ave,dc=xyz -H ldaps://localhost:636 -W -f ldif/21-import_ssh_pubkey.ldif
 sudo ldapmodify -Q -Y EXTERNAL -H ldapi:/// -f ldif/22-system_access.ldif
-sudo ldapadd -x -D cn=admin,dc=example,dc=com -H ldaps://localhost:636 -W -f ldif/23-sudo_rules.ldif
-sudo ldapadd -x -D cn=admin,dc=example,dc=com -H ldaps://localhost:636 -W -f ldif/24-clients.ldif
+sudo ldapadd -x -D cn=admin,dc=10ave,dc=xyz -H ldaps://localhost:636 -W -f ldif/23-sudo_rules.ldif
+sudo ldapadd -x -D cn=admin,dc=10ave,dc=xyz -H ldaps://localhost:636 -W -f ldif/24-clients.ldif
 sudo ldapmodify -Q -Y EXTERNAL -H ldapi:/// -f ldif/40-index.ldif
