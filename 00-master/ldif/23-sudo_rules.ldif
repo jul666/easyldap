@@ -2,14 +2,14 @@
 # Use with ~$ ldapadd -x -D cn=admin,dc=... -W -f 23-sudo_rules.ldif
 #
 # Create an LDAP Suffix for SUDO rules
-dn: ou=SUDO,dc=example,dc=com
+dn: ou=SUDO,dc=10ave,dc=xyz
 objectClass: top
 objectClass: organizationalUnit
 ou: SUDO
 
 # Create a SUDO rule containing default options inherited by all rules
 # SUDO Option !requiretty does not require user to be logged into real TTY
-dn: cn=defaults,ou=SUDO,dc=example,dc=com
+dn: cn=defaults,ou=SUDO,dc=10ave,dc=xyz
 objectClass: sudoRole
 cn: defaults
 sudoOption: !requiretty
@@ -18,7 +18,7 @@ sudoOption: !requiretty
 #sudoOption: !authenticate
 
 # Allow members of %admin to run ALL commands via SUDO on ALL hosts
-dn: cn=%admin,ou=SUDO,dc=example,dc=com
+dn: cn=%admin,ou=SUDO,dc=10ave,dc=xyz
 objectClass: sudoRole
 cn: %admin
 sudoUser: %admin
